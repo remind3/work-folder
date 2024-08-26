@@ -68,6 +68,7 @@ input, select, textarea {
     border: 1px solid #ccc;
     border-radius: 4px;
     box-sizing: border-box;
+    box-shadow: 0 1px 3px rgba(146, 146, 146, 0.2);
 }
 
 
@@ -85,14 +86,45 @@ button[type="submit"] {
 button[type="submit"]:hover {
     background-color: #45a049;
 }
+.delete-button {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    z-index: 100;
+    background-color: #f16d6d;
+    border: none;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    padding: 12px;
+    border-radius: 35%;
+    font-size: 16px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
 
+
+.delete-button i {
+    pointer-events: none;
+}
+
+.delete-button:hover {
+    background-color: #e53935;
+}
 .description {
     padding: 0px;
     margin: 0px ;
+    
 }
+
+.invalid {
+     border-color: red; }
+  #error { 
+    color: red;
+font-size: 10px;}
+
+
 .item-description{
-    padding: 0px;
-    margin: 0px ;
+    padding: 10px;
+    margin: 10px ;
    
 }
 
@@ -104,10 +136,10 @@ button[type="submit"]:hover {
     margin-bottom: 10px;
     margin-right: 10px;
     flex-direction: row;
+    overflow: hidden;
     flex-wrap: nowrap;
     border-radius: 0px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
     position: relative;
 
 }

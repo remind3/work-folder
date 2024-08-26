@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>сайтыч</title>
     <link rel ="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <header> 
@@ -26,29 +27,31 @@
                 <div class="forma">
                     <label for="name">Наименование товара </label>
                     <input type="text" id="name" placeholder="Введите наименование товара">
+                    <div id="error"></div>
                 </div>
                 <div class="forma">
                 </div>
                 <div class="forma">
                     <label for="description">Описание товара</label>
-                    <input id="description" placeholder="Введите описание товара"></input>
+                    <input type="text" id="description" placeholder="Введите описание товара">
+                    <div id="error"></div>
                 </div>
                 <div class="forma">
                     <label for="">Ссылка на изображение товара</label>
                     <input type="text" id="" placeholder="Введите ссылку">
+                    <div id="error"></div>
                 </div>
                 <div class="forma">
                     <label for="price">Цена товара *</label>
-                    <select id="price">
-                        <option value="10000">10 000 руб.</option>
-                        <option value="12000">12 000 руб.</option>
-                        <option value="14000">14 000 руб.</option>
-                    </select>
+                    <input type="text" id="" placeholder="Введите цену">
+                    <div id="error"></div>
+                    
                 </div>
                 <button type="submit">Добавить товар</button>
             </form>
         </div>
         <div class="item-box">
+            <div><button class="delete-button"><i class="fa-regular fa-trash-can"></i></button></div>
             <div class="item">
                 <div class="img"><img src="img/Rectangle 31.png" alt="Товар"></div>
                 <div class="item-description">
@@ -125,6 +128,30 @@
          
                     
     </div>
+    <script>
+
+        let inputs = document.getElementsByTagName("input")
+        for (let i= 0; i<inputs.length; i++)
+    {
+        let input = inputs.item(i) 
+        let error = input.parentElement.getElementsByTagName("div").item(0)
+        input.onblur = function() {
+          if (input.value.includes('')) { 
+            input.classList.add('invalid');
+            error.innerHTML = 'Поле является обязательным'
+          }
+        };
+        
+        input.onfocus = function() {
+          if (this.classList.contains('invalid')) {
+            // удаляем индикатор ошибки, т.к. пользователь хочет ввести данные заново
+            this.classList.remove('invalid');
+            error.innerHTML = "";
+          }
+        };
+    }
+        
+        </script>
 </body>
 </html>
 
