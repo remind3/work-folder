@@ -167,7 +167,7 @@
             for (let i = 0; i < formas.length; i++) {
                 let forma = formas.item(i)
 
-                let input = forma.getElementsByTagName("input").item(0)
+                let input = forma.children.item(1)
                 input.value = ""
                 let error = forma.children.item(2)
 
