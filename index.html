@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>сайтыч</title>
-    <link rel ="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
+
 <body>
-    <header> 
+    <header>
         <div class="product-add">
-            <h2>Добавление товара</h2></div>
-            <div><select id="filter-button">по умолчанию
+            <h2>Добавление товара</h2>
+        </div>
+        <div><select id="filter-button">по умолчанию
                 <option value="По умолчанию"> По умолчанию</option>
                 <option value="Сначала дорогие">Сначала дорогие</option>
                 <option value="Сначала недорогие">Сначала недорогие</option>
@@ -21,7 +24,7 @@
         </div>
     </header>
     <div class="container">
-        
+
         <div class="container-forma">
             <form>
                 <div class="forma">
@@ -30,41 +33,40 @@
                     <div id="error"></div>
                 </div>
                 <div class="forma">
-                </div>
-                <div class="forma">
                     <label for="description">Описание товара</label>
                     <input type="text" id="description" placeholder="Введите описание товара">
                     <div id="error"></div>
                 </div>
                 <div class="forma">
                     <label for="">Ссылка на изображение товара</label>
-                    <input type="text" id="" placeholder="Введите ссылку">
+                    <input type="text" id="url" placeholder="Введите ссылку">
                     <div id="error"></div>
                 </div>
                 <div class="forma">
                     <label for="price">Цена товара *</label>
-                    <input type="text" id="" placeholder="Введите цену">
+                    <input type="text" id="price" placeholder="Введите цену">
                     <div id="error"></div>
-                    
                 </div>
-                <button type="submit">Добавить товар</button>
+                <button id="form-submit" class="submit" type="submit">Добавить товар</button>
             </form>
         </div>
         <div class="item-box">
-            <div><button class="delete-button"><i class="fa-regular fa-trash-can"></i></button></div>
             <div class="item">
                 <div class="img"><img src="img/Rectangle 31.png" alt="Товар"></div>
                 <div class="item-description">
                     <h3>Наименование товара</h3>
-                    <p>Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк</p>
+                    <p>Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
+                        товара в несколько строк</p>
                     <div class="price">10 000 руб.</div>
                 </div>
+                <button class="delete-button"><i class="fa-regular fa-trash-can"></i></button>
             </div>
             <div class="item">
                 <div class="img"><img src="img/Rectangle 31.png" alt="Товар"></div>
                 <div class="item-description">
                     <h3>Наименование товара</h3>
-                    <p>Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк</p>
+                    <p>Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
+                        товара в несколько строк</p>
                     <div class="price">12 000 руб.</div>
                 </div>
             </div>
@@ -72,7 +74,8 @@
                 <div class="img"><img src="img/Rectangle 31.png" alt="Товар"></div>
                 <div class="item-description">
                     <h3>Наименование товара</h3>
-                    <p>Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк</p>
+                    <p>Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
+                        товара в несколько строк</p>
                     <div class="price">14 000 руб.</div>
                 </div>
             </div>
@@ -80,15 +83,17 @@
                 <div class="img"><img src="img/Rectangle 31.png" alt="Товар"></div>
                 <div class="item-description">
                     <h3>Наименование товара</h3>
-                    <p>Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк</p>
+                    <p>Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
+                        товара в несколько строк</p>
                     <div class="price">16 000 руб.</div>
                 </div>
-            </div>  
+            </div>
             <div class="item">
                 <div class="img"><img src="img/Rectangle 31.png" alt="Товар"></div>
                 <div class="item-description">
                     <h3>Наименование товара</h3>
-                    <p>Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк</p>
+                    <p>Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
+                        товара в несколько строк</p>
                     <div class="price">11 000 руб.</div>
                 </div>
             </div>
@@ -96,7 +101,8 @@
                 <div class="img"><img src="img/Rectangle 31.png" alt="Товар"></div>
                 <div class="item-description">
                     <h3>Наименование товара</h3>
-                    <p>Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк</p>
+                    <p>Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
+                        товара в несколько строк</p>
                     <div class="price">17 000 руб.</div>
                 </div>
             </div>
@@ -104,7 +110,8 @@
                 <div class="img"><img src="img/Rectangle 31.png" alt="Товар"></div>
                 <div class="item-description">
                     <h3>Наименование товара</h3>
-                    <p>Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк</p>
+                    <p>Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
+                        товара в несколько строк</p>
                     <div class="price">15 000 руб.</div>
                 </div>
             </div>
@@ -112,7 +119,8 @@
                 <div class="img"><img src="img/Rectangle 31.png" alt="Товар"></div>
                 <div class="item-description">
                     <h3>Наименование товара</h3>
-                    <p>Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк</p>
+                    <p>Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
+                        товара в несколько строк</p>
                     <div class="price">9 000 руб.</div>
                 </div>
             </div>
@@ -120,42 +128,64 @@
                 <div class="img"><img src="img/Rectangle 31.png" alt="Товар"></div>
                 <div class="item-description">
                     <h3>Наименование товара</h3>
-                    <p>Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание товара в несколько строк</p>
+                    <p>Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
+                        товара в несколько строк</p>
                     <div class="price">20 000 руб.</div>
                 </div>
-            </div>  
-    
-         
-                    
-    </div>
-    <script>
+            </div>
 
-        let inputs = document.getElementsByTagName("input")
-        for (let i= 0; i<inputs.length; i++)
-    {
-        let input = inputs.item(i) 
-        let error = input.parentElement.getElementsByTagName("div").item(0)
-        input.onblur = function() {
-          if (input.value.includes('')) { 
-            input.classList.add('invalid');
-            error.innerHTML = 'Поле является обязательным'
-          }
-        };
-        
-        input.onfocus = function() {
-          if (this.classList.contains('invalid')) {
-            // удаляем индикатор ошибки, т.к. пользователь хочет ввести данные заново
-            this.classList.remove('invalid');
-            error.innerHTML = "";
-          }
-        };
-    }
-        
+
+
+        </div>
+        <script>
+            let formButton = document.getElementById("form-submit")
+            let formas = document.getElementsByClassName("forma")
+            let formContent = {
+                name: "",
+                description: "",
+                url: "",
+                price: "",
+            }
+
+            function handleInput() {
+                formContent[this.id] = this.value
+                if (Object.values(formContent).includes("")) {
+                    formButton.classList.remove("submit-sucess")
+                } else {
+                    formButton.classList.add("submit-sucess")
+                }
+            }
+
+            for (let i = 0; i < formas.length; i++) {
+                let forma = formas.item(i)
+
+                let input = forma.getElementsByTagName("input").item(0)
+                input.value = ""
+                let error = forma.children.item(2)
+
+                input.onblur = function () {
+                    if (input.value === '') {
+                        input.classList.add('invalid');
+                        error.innerHTML = 'Поле является обязательным'
+                    }
+                };
+
+                input.onfocus = function () {
+                    if (this.classList.contains('invalid')) {
+                        this.classList.remove('invalid');
+                        error.innerHTML = "";
+                    }
+                };
+
+                input.addEventListener("input", handleInput)
+            }
         </script>
 </body>
+
 </html>
 
 
 
 </body>
+
 </html>
