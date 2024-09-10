@@ -7,11 +7,12 @@
     <title>сайтыч</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital@0;1&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital@0;1&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 
-    
+
 </head>
 
 <body>
@@ -26,6 +27,7 @@
 
 
             </select>
+
         </div>
     </header>
     <div class="container">
@@ -42,7 +44,7 @@
                     <input type="text" id="description" placeholder="Введите описание товара">
                     <div id="error"></div>
                 </div>
-                <div class="forma">      
+                <div class="forma">
                     <label for="">Ссылка на изображение товара<span class="required">*</span></label>
                     <input type="text" id="url" placeholder="Введите ссылку">
                     <div id="error"></div>
@@ -56,143 +58,95 @@
             </form>
         </div>
         <div class="item-box">
-            <div class="item">
-                <div class="img"><img src="img/Rectangle 31.png" alt="Товар"></div>
-                <div class="item-description">
-                    <h3>Наименование товара</h3>
-                    <p>Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
-                        товара в несколько строк</p>
-                    <div class="price">10 000 руб.</div>
+            <div class="item" v-for="item in items">
+                <div class="img">
+                    <img :src="item.imageUrl">
                 </div>
-                <button class="delete-button"><i class="fa-regular fa-trash-can"></i></button>
-            </div>
-            <div class="item">
-                <div class="img"><img src="img/Rectangle 31.png" alt="Товар"></div>
                 <div class="item-description">
-                    <h3>Наименование товара</h3>
-                    <p>Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
-                        товара в несколько строк</p>
-                    <div class="price">12 000 руб.</div>
+                    <h3>{{ item.name }}</h3>
+                    <p>{{ item.description }}</p>
+                    <div class="price">{{ item.price }} руб.</div>
                 </div>
-                <button class="delete-button"><i class="fa-regular fa-trash-can"></i></button>
+                <button class="delete-button" @click="deleteItem(item.id)">
+                    <i class="fa-regular fa-trash-can"></i>
+                </button>
             </div>
-            <div class="item">
-                <div class="img"><img src="img/Rectangle 31.png" alt="Товар"></div>
-                <div class="item-description">
-                    <h3>Наименование товара</h3>
-                    <p>Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
-                        товара в несколько строк</p>
-                    <div class="price">14 000 руб.</div>
-                </div>
-                <button class="delete-button"><i class="fa-regular fa-trash-can"></i></button>
-            </div>
-            <div class="item">
-                <div class="img"><img src="img/Rectangle 31.png" alt="Товар"></div>
-                <div class="item-description">
-                    <h3>Наименование товара</h3>
-                    <p>Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
-                        товара в несколько строк</p>
-                    <div class="price">16 000 руб.</div>
-                </div>
-                <button class="delete-button"><i class="fa-regular fa-trash-can"></i></button>
-            </div>
-            <div class="item">
-                <div class="img"><img src="img/Rectangle 31.png" alt="Товар"></div>
-                <div class="item-description">
-                    <h3>Наименование товара</h3>
-                    <p>Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
-                        товара в несколько строк</p>
-                    <div class="price">11 000 руб.</div>
-                </div>
-                <button class="delete-button"><i class="fa-regular fa-trash-can"></i></button>
-            </div>
-            <div class="item">
-                <div class="img"><img src="img/Rectangle 31.png" alt="Товар"></div>
-                <div class="item-description">
-                    <h3>Наименование товара</h3>
-                    <p>Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
-                        товара в несколько строк</p>
-                    <div class="price">17 000 руб.</div>
-                </div>
-                <button class="delete-button"><i class="fa-regular fa-trash-can"></i></button>
-            </div>
-            <div class="item">
-                <div class="img"><img src="img/Rectangle 31.png" alt="Товар"></div>
-                <div class="item-description">
-                    <h3>Наименование товара</h3>
-                    <p>Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
-                        товара в несколько строк</p>
-                    <div class="price">15 000 руб.</div>
-                </div>
-                <button class="delete-button"><i class="fa-regular fa-trash-can"></i></button>
-            </div>
-            <div class="item">
-                <div class="img"><img src="img/Rectangle 31.png" alt="Товар"></div>
-                <div class="item-description">
-                    <h3>Наименование товара</h3>
-                    <p>Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
-                        товара в несколько строк</p>
-                    <div class="price">9 000 руб.</div>
-                </div>
-                <button class="delete-button"><i class="fa-regular fa-trash-can"></i></button>
-            </div>
-            <div class="item">
-                <div class="img"><img src="img/Rectangle 31.png" alt="Товар"></div>
-                <div class="item-description">
-                    <h3>Наименование товара</h3>
-                    <p>Довольно-таки интересное описание товара в несколько строк. Довольно-таки интересное описание
-                        товара в несколько строк</p>
-                    <div class="price">20 000 руб.</div>
-                </div>
-                <button class="delete-button"><i class="fa-regular fa-trash-can"></i></button>
-            </div>
-
-
-
         </div>
-        <script>
-            let formButton = document.getElementById("form-submit")
-            let formas = document.getElementsByClassName("forma")
-            let formContent = {
-                name: "",
-                description: "",
-                url: "",
-                price: "",
-            }
-
-            function handleInput() {
-                formContent[this.id] = this.value
-                if (Object.values(formContent).includes("")) {
-                    formButton.classList.remove("submit-sucess")
-                } else {
-                    formButton.classList.add("submit-sucess")
+    </div>
+    <script>
+        const app = Vue.createApp({
+            data() {
+                return {
+            
+                    items: [
+                        { id: 1, name: 'Товар 1', description: 'Описание товара 1', price: '10 000', imageUrl: 'img/Rectangle 31.png' },
+                        { id: 2, name: 'Товар 2', description: 'Описание товара 2', price: '8 000', imageUrl: 'img/Rectangle 31.png' },
+                        { id: 3, name: 'Товар 3', description: 'Описание товара 3', price: '12 000', imageUrl: 'img/Rectangle 31.png' },
+                        { id: 4, name: 'Товар 4', description: 'Описание товара 4', price: '15 000', imageUrl: 'img/Rectangle 31.png' },
+                        { id: 5, name: 'Товар 5', description: 'Описание товара 5', price: '7 000', imageUrl: 'img/Rectangle 31.png' },
+                        { id: 6, name: 'Товар 6', description: 'Описание товара 6', price: '9 000', imageUrl: 'img/Rectangle 31.png' },
+                        { id: 7, name: 'Товар 7', description: 'Описание товара 7', price: '11 000', imageUrl: 'img/Rectangle 31.png' },
+                        { id: 8, name: 'Товар 8', description: 'Описание товара 8', price: '13 000', imageUrl: 'img/Rectangle 31.png' },
+                        { id: 9, name: 'Товар 9', description: 'Описание товара 9', price: '5 000', imageUrl: 'img/Rectangle 31.png' },
+                        { id: 10, name: 'Товар 10', description: 'Описание товара 10', price: '14 000', imageUrl: 'img/Rectangle 31.png' },
+                        { id: 11, name: 'Товар 11', description: 'Описание товара 11', price: '16 000', imageUrl: 'img/Rectangle 31.png' },
+                        { id: 12, name: 'Товар 12', description: 'Описание товара 12', price: '18 000', imageUrl: 'img/Rectangle 31.png' }
+                    ]
+                };
+            },
+            methods: {
+                deleteItem(id) {
+                    this.items = this.items.filter(item => item.id !== id);
                 }
             }
+        });
 
-            for (let i = 0; i < formas.length; i++) {
-                let forma = formas.item(i)
+        app.mount('#app');
+    </script>
 
-                let input = forma.children.item(1)
-                input.value = ""
-                let error = forma.children.item(2)
+    <script>
+        let formButton = document.getElementById("form-submit")
+        let formas = document.getElementsByClassName("forma")
+        let formContent = {
+            name: "",
+            description: "",
+            url: "",
+            price: "",
+        }
 
-                input.onblur = function () {
-                    if (input.value === '') {
-                        input.classList.add('invalid');
-                        error.innerHTML = 'Поле является обязательным'
-                    }
-                };
-
-                input.onfocus = function () {
-                    if (this.classList.contains('invalid')) {
-                        this.classList.remove('invalid');
-                        error.innerHTML = "";
-                    }
-                };
-
-                input.addEventListener("input", handleInput)
+        function handleInput() {
+            formContent[this.id] = this.value
+            if (Object.values(formContent).includes("")) {
+                formButton.classList.remove("submit-sucess")
+            } else {
+                formButton.classList.add("submit-sucess")
             }
-        </script>
+        }
+
+        for (let i = 0; i < formas.length; i++) {
+            let forma = formas.item(i)
+
+            let input = forma.children.item(1)
+            input.value = ""
+            let error = forma.children.item(2)
+
+            input.onblur = function () {
+                if (input.value === '') {
+                    input.classList.add('invalid');
+                    error.innerHTML = 'Поле является обязательным'
+                }
+            };
+
+            input.onfocus = function () {
+                if (this.classList.contains('invalid')) {
+                    this.classList.remove('invalid');
+                    error.innerHTML = "";
+                }
+            };
+
+            input.addEventListener("input", handleInput)
+        }
+    </script>
 </body>
 
 </html>
